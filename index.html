@@ -778,6 +778,8 @@
 
   .attrib { margin-top: 18px; }
 
+  /* Secondary links sit in running text, so they get vertical padding
+     to reach a usable touch target without changing the layout. */
   .attrib summary {
     font-family: var(--display);
     font-size: 11px;
@@ -785,6 +787,7 @@
     text-transform: uppercase;
     color: var(--ink-dim);
     cursor: pointer;
+    padding: 11px 0;
   }
 
   .attrib summary:hover { color: var(--bronze); }
@@ -804,9 +807,16 @@
     max-width: 62ch;
   }
 
-  .attrib li { margin-bottom: 5px; }
+  .attrib li { margin-bottom: 2px; }
 
-  .attrib a { color: var(--bronze); text-decoration: none; border-bottom: 1px solid var(--line); }
+  .attrib a {
+    display: inline-block;
+    padding: 7px 0;
+    color: var(--bronze);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+
   .attrib a:hover { border-color: var(--bronze); }
 
   .expect div {
@@ -889,10 +899,11 @@
   }
 
   #foot a {
+    display: inline-block;
     color: var(--ink);
     text-decoration: none;
     border-bottom: 1px solid var(--upd-magenta);
-    padding-bottom: 2px;
+    padding: 7px 0 3px;
     transition: color .2s ease;
   }
 
@@ -929,6 +940,14 @@
     .castmeta .actor { grid-column: 1; }
     .castrow { gap: 14px; }
     .portrait { width: 52px; height: 52px; }
+
+    /* Bring the landing's call to action nearer the fold. */
+    .lockup { margin-bottom: 22px; }
+    h1 .sub { margin-top: 14px; }
+    .spirit { margin-top: 20px; padding-left: 16px; }
+    .spirit p { font-size: 16.5px; margin-bottom: .75em; }
+    .chips { margin-top: 20px; gap: 6px 16px; }
+    .actions { margin-top: 24px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
